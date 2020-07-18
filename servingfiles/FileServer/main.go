@@ -1,0 +1,26 @@
+package main
+
+import (
+	"io"
+	"net/http"
+)
+
+func main() {
+
+	//http.Handle("/", http.FileServer(http.Dir("/tmp")))
+	//Handle --> http.Handle("/", http.FileServer(http.Dir("/tmp")))
+	//	func FileServer
+	//func FileServer(root FileSystem) Handler
+	//FileServer returns a handler that serves HTTP requests with the contents of the file system rooted at root.
+	//To use the operating system's file system implementation, use http.Dir:
+	//http.FileServer --> http.FileServer(http.Dir("/tmp")))
+	//http.Dir -->
+	http.Handle("/", http.FileServer(http.Dir(".")))
+	http.HandleFunc("/dog/", dog)
+	http.ListenAndServe(":8080", nil)
+}
+
+func dog(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	io.WriteString(w, `<img src="/tody.jpg">`)
+}

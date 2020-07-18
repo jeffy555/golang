@@ -1,0 +1,33 @@
+{{template "header"}}
+
+<form method="POST">
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="first">
+    <br>
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="last">
+    <br>
+    <label for="sub">Subscribe</label>
+    <input type="checkbox" id="sub" name="subscribe">
+    <br>
+
+    <label for="Email">Email</label>
+    <input type="email" id="Email" name="email">
+    <br>
+    <label for="ID">ID</label>
+    <input type="text" id="text" name="identify">
+    <br>
+    <input type="submit">
+
+
+</form>
+
+<br>
+
+<h1>First: {{.FirstName}}</h1>
+<h1>Last: {{.LastName}}</h1>
+<h1>Subscribed: {{.Subscribed}}</h1>
+<h1>Email: {{.Email}}</h1>
+<h1>Identify: {{.Identify}}</h1>
+
+{{template "footer"}}

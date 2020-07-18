@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+{{range .}}
+    <h1>{{.Sensor}}</h1>
+        {{range .Cars}}
+            {{ .Name}}<br>
+            {{ .Model}}<br>
+        {{end}}
+{{end}}
+</body>
+</html>

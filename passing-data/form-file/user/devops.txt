@@ -1,0 +1,162 @@
+Intro:
+
+
+Devops is a cultural movement of collaboration of Development and Operations.
+Tools that drive Devops. They are essential key to success Devops.
+
+Waterfall model vs Agile model
+
+Waterfall: Several month of development work and Long testing and release cycle
+Agile : Small piece deployment / frequent deployment 
+Devops and Agile go hand in hand.
+
+
+Goals of Devops:
+
+Speed of the development and stability of the Operations to minimize downtime.
+Fast time-to-market
+few production failures
+immediate recovery from failures
+
+Devops vs Traditional Silos
+
+Traditional PPT
+Usual scenarios: Dev complain QA. QA complain Dev. Operations complains both.
+Code is working in my system. No visibiltiy among each other.
+So there is always Finger pointing each other.
+They have different Priorities. Dev wants to deliver the code, QA and Operations wants the code to be stable.
+Lack of automation : Build and deployment-Inconsistency.
+Long time to identify and fix problems.
+
+
+Devops PPT
+
+Benefits:
+
+Improvise the product itself.
+What goes into the next sprint and how do we plan it.
+Closely Monitoring the code changes and tracking the performance related aspects of the application
+Feedback from the customers and frequent deployment made easy.
+
+Rework and Overhead can be reduced.
+
+Old days: Dev team will handover the code to Testing team and they need wait for the test results
+for atleast 3 or 4 more days. Because the QA team has to wait for the environment to be spinned up for them
+and the application has to be deployed and they will run the manual testing pattern to validate the
+application.
+
+Devops Culture: Ensure this gap is filled and also encouraged the automation tester to keep his hand
+dirty in writing the test-cases.
+
+For deploying to Production: Dev team needs to sit over the weekend colloborating with all the stalkholders
+and finally they end up screwing the job on Monday. Because of OverHead and going in narraw approach.
+
+Start with Source Code Management : Version Control Management
+
+CI: Build Automation
+
+Automating the process of preparing the code for the deployment to Live
+Depending on the languages the code is build / linted / minified / transformed / unit tested
+Code will be built on someother machines
+
+Benefits: 
+
+Fast: Automation is going to handle so obviously it will be very fast
+Consistent: Avoids the confusions and increases the consistency when running the build
+Repetable: Build can be done multiple times and can be deployed to the deployment server
+Portable: Build can be done on any machine. If java / nodejs / Go it needs to have the softwares installed in the machine
+Reliable: Fewer problems and so it is reliable
+
+When a developer commits a code to the Master then the build will be triggered automatically
+
+If developer A commits the code and breaks the build then the CI tool identify the person who broke the build and he will be necessary to fix the issue.
+
+Benefits: Early detection of errors and bugs
+Since code is merged then and there, So there is no need to do a big merge.
+Continous testing : QA testers can test the code then and there instead of testing at the final phase like we do in waterfall model.
+
+
+
+CD:
+
+Continous deployment will always keep the code in a stable part. when we deploy this automatically to Dev / QA / UAT then we can deploy to PROD without any risk.
+Since the package from the build is going to each and every phase and there is no chance for the developers to change the code.
+If they want to make any code change then they need to strictly go from the dev. Its a cycle process.
+Rollbacks are tedious process in traditional approach, But through devops approach it will be a piece of Cake. So even if the deployment fail in production there is no state of panic.
+
+
+Infrastucture as a Code:
+
+Provision infrastrucutre through code and automation
+Use infrastrucuture code for creating 
+Servers
+Instances
+Environments
+Containers
+Other infrastructure
+
+WHY IaaC
+
+Code reusability
+Scalability: Need new resource or change in the resource. No problem. 
+Self documenting
+Simplify the complexity
+
+Configuration Management:
+
+Ansible / CHef /Puppet
+Making changes to bulk of servers. 100 VM's. IaaC will be helpful along with the configuration management to acheive this process.
+Benefits:
+Time saving
+Maintainability
+Less config drift
+
+Orchestration: 
+
+Monitoring and spinning of the resources. A traffic spike in the server. Monitoring tool will detect and provision additional resorces and once the traffic is cool down
+then the same monitoring will detect and destroy the newly created resource to handle the traffic.
+
+All of the above operation when the Engineer is not at his desk / Or chit-chatting / or he went to coffee
+
+Same Song:
+
+Scalability
+Time consuming
+Stability
+
+Monitoring:
+
+PPT
+
+Monitoring always go with the orchestration when there is any distrupt in the application an error or alert will be triggered and notified to the stakeholders.
+
+Benefits:
+
+Fast Response
+Visibility to other teams
+Automated Response
+Better root cause analysis
+
+Microservice:
+
+Breaks the applciation to a small chunk of loosely coupled services
+Traiditionally We used to have a monolithitic architecture, All features are a part of large application
+Microservice is a small piece of the applications overall functionality
+
+Example : E-commerce like flipkart / pet clinic
+
+Benefits:
+Absolutely everything
+Cost optimization
+Scalability
+Re-usability
+
+
+Devops and Cloud:
+
+Devops and Cloud bonded together to bring out the flexibilties
+Cloud services practises Devops
+Cloud services also offers services for Devops
+(Iaas) -- Creation of everything and your responsible
+(Paas) -- Infra owned by cloud / you own the code (AWS Bean stalk) / Azure web app service
+(Saas) -- Email / Notification
